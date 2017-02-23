@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "MyAccount";
+}
+
+<h2 style="text-align:center;">MyAccount</h2>
+
+<div class="col-md-2">
+        <img src="~/img/peroson.jpg"><br>
+        Name: @Session["user"]<br>
+        ID:@Session["Id"]<br>
+</div>
+
+<div class="col-md-10">
+    <div style="float:left;" class="grid" ng-repeat="r in foods | limitTo:limit">
+        <div><a href="#/Home/food/{{r.Id}}"><img class="grid-photo" src='{{r.imgUrl}}'></a></div>
+        <div class="grid-title">{{r.name}}</div>
+        <p class="post-description">{{r.description}}</p>
+        <ul class="control-button">
+            <li class="bookmark1" ng-model="value">
+                <div style="float:left" ng-click="value=value+1"><a><img class="redHeart" src="~/img/heart.jpg"></a></div>
+                <div style="float:left; margin-left:5px;margin-top:2px;">{{value}}</div>
+            </li>
+            <li class="bookmark2">
+                <button ng-click="cancel(r.Id);" class="savebutton">cancel</button>
+            </li>
+        </ul>
+    </div>
+    <div class="loadmore">
+        <a class="clicker" ng-click='loadMore()'>Load More</a>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,142 @@
+﻿#head_image {
+    height:190px;
+    width:100%;
+    background-image:url("../img/top1.jpg") ;
+    margin:0;
+}
+#head_image #head_image_top {
+    width:100%;
+    height:100%;
+}
+.nav {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.menu-nav {
+ background-color:	#f0e68c;
+ border-radius:10%;
+
+}
+#container-fluid {
+    width:100%; 
+    height:20px; 
+    background-color:red;
+}
+.grid {
+   margin-top:10px;
+}
+.insideStyle {
+    position: relative;
+    border:none 1px;
+    border-radius: 3%;
+    height: 400px;
+    background-color:white;
+    align-items:center;
+    box-shadow: 10px 10px 5px #888888;  
+}
+.grid-photo {
+    position:relative;
+    top:0;
+    height: 300px;
+    width: 80%;
+    padding:5px;
+    border-radius: 3%;
+    clear: both;
+    display: block;
+    margin:auto;
+    
+}
+.grid-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: break-word;
+    margin: 7px auto .4rem;
+    width: 93%;
+    font-size: 17px;
+    color: #f47e01;
+    word-break: break-all;
+    -webkit-font-smoothing: antialiased;
+}
+
+.post-description {
+    position:relative;
+    height: 51px;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    font-family: Verdana, Arial, sans-serif !important;
+    cursor: pointer;
+    width: 93%;
+    line-height:1.4em;
+    height:4.2em;
+    padding-top: 2px;
+    font-weight: 400;
+    color: #383838;
+    font-size: 12px;
+    margin: 0 auto;
+}
+.control-button {
+    width:100%;
+    position: absolute;
+    bottom:0;
+    list-style-type: none;
+    margin-bottom: 0px;
+    border-top: 1px dotted #e6e6e6;
+    padding: 0px 10px;
+}
+
+.loadmore {
+    position:relative;
+    left:0;
+    width: 100%;
+    height: 100px;
+    margin: 0px auto;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+}
+
+.clicker {
+    display: block;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+    height: 80px;
+    text-decoration: none;
+    width: 80px;
+    border: 1px solid #dac9c9;
+    border-radius: 40px;
+}
+
+.savebutton {
+    border-radius: 6px;
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    cursor: pointer;
+    color: #777777;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0px 6px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffffff;  
+}
+.bookmark1 {
+    float:left;
+}
+.bookmark2 {
+    float:right;
+}
+.redHeart {
+    width:30px;
+    height:25px;
+}
+body {
+
+}

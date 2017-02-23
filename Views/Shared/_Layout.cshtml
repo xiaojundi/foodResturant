@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body style="background-color:#f3f0eb">
+    <div style="background-color: white; border:none;" class="navbar navbar-inverse navbar-fixed-top">
+        <img style="width:100px; height:40px; margin-top:5px; float:left;" src="~/img/brand.png">
+        
+        <div class="container">
+            <div class="navbar-header" style="float:left">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" style="float:left">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("Contact", "Index", "Home/Contact", new { area = "" }, null)</li>
+                </ul>
+            </div> 
+            <div class="navbar-collapse collapse" style="float:right;">
+                <ul class="nav navbar-nav">
+                    @if (Session["user"] == null)
+                    {
+                        <li><a href="~/Home/Login">Login</a></li>
+                        <li><a href="~/Home/Signup">Signup</a></li> 
+                    }
+                    else
+                    {
+                        <li><a>Welcome!:</a></li>
+                        <li><a >@Session["user"]</a></li>
+                        <li><a href="~/Home/Logout">Logout</a></li>
+                    }
+                    
+                </ul>
+            </div> 
+        </div>
+        
+    </div>
+   
+    <div>
+        @RenderBody()
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,26 @@
+﻿
+<style>
+    .form-signin {
+
+    margin: 0 auto;
+    background-color: white !important;
+    border: 3px dotted rgba(0, 0, 0, 0.1);
+    color: black;
+}
+</style>
+<div class="col-md-4 col-md-offset-4" style="margin-top:100px;">
+    <div class="panel panel-default">
+        <div class="panel-heading" style="text-align:center; ">Login</div>
+        <div class="panel-body" style="margin-left:35%;">
+            @using (Html.BeginForm())
+            {
+                <div style="color:black">@Html.Label("Login Id")</div>
+                <div>@Html.TextBox("Id")</div>
+                <div style="color:black">@Html.Label("Password")</div>
+                <div>@Html.Password("password")</div>
+                <input class="btn btn-primary" type="submit" value="Login">
+            }
+        </div>
+    </div>
+</div>
+

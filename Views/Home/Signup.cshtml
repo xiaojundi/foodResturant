@@ -1,0 +1,43 @@
+﻿
+
+<style>
+    .form-signin {
+        max-width: 420px;
+        padding: 30px 38px 66px;
+        margin: 0 auto;
+        background-color: white !important;
+        border: 3px dotted rgba(0, 0, 0, 0.1);
+        color: black;
+    }
+</style>
+<div class="col-md-4 col-md-offset-4" style="margin-top:100px;">
+<div class="panel panel-default">
+    <div class="panel-heading" style="text-align:center;">Sign up</div>
+    <div class="panel-body">
+        <div style="margin-left:35%;">
+            @using (Html.BeginForm())
+            {
+                <div style="color:black">@Html.Label("Login Id")</div>
+                <div>@Html.TextBox("Id")</div>
+                <div style="color:black">@Html.Label("Login name")</div>
+                <div>@Html.TextBox("name")</div>
+                <div style="color:black">@Html.Label("Login phone")</div>
+                <div>@Html.TextBox("phone")</div>
+                <div style="color:black">@Html.Label("Login gender")</div>
+                <div>
+                    @Html.DropDownList("Gender", new List<SelectListItem>{
+        new SelectListItem{ Text="Male", Value="Male"},
+        new SelectListItem{ Text="Female", Value="Female"}
+        }, "--- Select ---"
+        )
+            </div>
+            <div style="color:black">@Html.Label("Login password")</div>
+            <div>@Html.Password("password1")</div>
+            <div style="color:black">@Html.Label("password input again")</div>
+            <div>@Html.Password("password2")</div>
+            <input class="btn btn-primary" type="submit" value="Signup">
+            }
+        </div>
+    </div>
+</div>
+</div>
